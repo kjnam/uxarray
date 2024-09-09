@@ -1091,7 +1091,7 @@ class UxDataArray(xr.DataArray):
             uxgrid=sliced_grid,
             data=d_var,
             name=self.name,
-            coords=self.coords,
+            coords=d_var.coords,
             dims=self.dims,
             attrs=self.attrs,
         )
