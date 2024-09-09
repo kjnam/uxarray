@@ -154,6 +154,8 @@ def _standardize_connectivity(ds, conn_name):
         # reassign data to use updated connectivity
         ds[conn_name].data = new_conn
 
+        # set start index to 0
+        ds[conn_name].attrs["start_index"] = 0
         # use new fill value
         ds[conn_name].attrs["_FillValue"] = INT_FILL_VALUE
 
